@@ -1,0 +1,14 @@
+name: Hello World Workflow
+
+on: [push]  # This workflow triggers on a push event to the repository.
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest  # Specifies the type of machine to run the job on.
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  # Checks out your repository under $GITHUB_WORKSPACE.
+
+      - name: Hello World Step
+        run: echo "Hello, World!"  # The command to run. In this case, it's just printing "Hello, World!" to the console.
